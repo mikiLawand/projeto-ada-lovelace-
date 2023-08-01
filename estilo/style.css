@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+@import 
+url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+@font-face{
+    font-family: Code;
+    src: url('../fontes/VT323-Regular.ttf') format('TrueType');
+    font-weight: normal;
+}
+
+:root{ /*todas as configurações colocadas aqui dentro servem para o arquivo todo*/
+  --corPink: #FF00BF;
+  --corRosaClaro: #FFBFE7;
+  --corAzulEscuro: #1700D1;
+  --corAzulmedio: #0B70DE;
+  --corAzulClaro: #A8B4EA;
+  --fonteDecorativa: 'Code', cursive;
+  --fonteNormal:'Lora', serif;
+  
+
+}
+
+*{ 
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--corRosaClaro);
+    font-family: var(--fonteDecorativa);
+}
+
+a.externo::after{
+    content: '\1F517';
+}
+
+p{
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 1.2em; /*espaço entre as linhas*/
+}
+
+header{
+    /*background-color: var(--corAzulEscuro);*/
+    background-image: linear-gradient(to bottom, var(--corAzulEscuro), var(--corRosaClaro));
+    min-height: 100px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1{
+   color: var(--corPink);
+   font-family: var(--fonteDecorativa);
+   margin-bottom: 2px;
+   font-size: 5em;
+   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.463);
+}
+
+header > p{
+    color: var(--corAzulmedio);
+    font-family: var(--fonteNormal);
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    padding-bottom: 10px;
+    
+}
+
+nav{
+    background-color: var(--corRosaClaro);
+    text-align: center;
+    padding: 10px;
+}
+
+nav > a{
+    color: var(--corAzulEscuro);
+    padding:10px;
+    text-decoration:none;
+    transition-duration: .5;
+}
+
+nav a:hover{
+    background-color: var(--corPink);
+    border-radius: 5px;
+    
+}
+
+main{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.336);
+
+    min-width: 320px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 25px;
+
+}
+
+main strong{
+    color: #FF00BF;
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: none;
+    color: #FF00BF;
+    background-color: #FFBFE7;
+    font-weight: bold;
+}
+
+main a:hover{
+    text-decoration: underline;
+}
+
+main > img{
+    width: 100%;
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+article > h1{
+    color: var(--corPink);
+}
+
+article > h2{
+    color: var(--corAzulmedio);
+    background-image: linear-gradient(to right, var(--corAzulClaro), transparent);
+}
+
+article > p{
+    font-family: var(--fonteNormal);
+}
+
+div.video{
+    margin: 0px -20px 30px 0px;
+    padding: 20px;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--corAzulClaro);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: var(--fonteNormal);
+}
+
+aside > ul{
+   list-style-position: inside; /*posição dos itens da lista*/
+   list-style-type: '\1FAD0';
+}
+
+aside > h3{
+    color: var(--corPink);
+    background-color: #FFBFE7;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+footer{
+    background-color: var(--corRosaClaro);
+    color: var(--corPink);
+}
+
+footer p{
+    text-align: center;
+}
+
+footer a{
+    color: #1700D1;
+    text-decoration: underline
+}
